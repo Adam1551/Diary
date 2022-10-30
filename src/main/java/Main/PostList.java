@@ -1,20 +1,34 @@
-package main.java;
+package Main;
 
 import java.time.LocalDate;
 
 public class PostList {
+    private String date;
     private String title;
     private String post;
 
-    private String date;
-
-    public PostList(String title, String post, String date) {
+    public PostList(String date, String title, String post) {
+        this.date = date;
         this.title = title;
         this.post = post;
-        this.date = date;
     }
 
     public PostList() {
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    @Override
+    public String toString() {
+        return "PostList{" +
+                "date=" + date +
+                '}';
     }
 
     public String getTitle() {
@@ -33,20 +47,7 @@ public class PostList {
         this.post = post;
     }
 
-    public String getDate() {
-        return date;
-    }
 
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    @Override
-    public String toString() {
-        return "PostList{" +
-                "date=" + date +
-                '}';
-    }
 }
 
 
