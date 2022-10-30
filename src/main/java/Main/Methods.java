@@ -3,6 +3,9 @@ package Main;
 import java.io.IOException;
 import java.util.Scanner;
 public class Methods {
+    /**
+     * Denna klass innehåller metoder som används i dagboken
+     */
 
     static Scanner scanner = new Scanner(System.in);
     static int choice = 0;

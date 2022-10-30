@@ -11,14 +11,17 @@ import java.util.Scanner;
 import static Main.Methods.*;
 
 public class Diary {
+    /**
+     * Denna klass är själva dagboken, det är härifrån programmet körs
+     */
     public static void main(String[] args) throws IOException {
 
         mainMenu();
         Scanner scanner = new Scanner(System.in);
         int choice = 0;
         ObjectMapper mapper = new ObjectMapper();
-        List<PostList> PostListEntries = List.of(mapper.readValue(Paths.get("src/main/resources/posts.json").toFile(),
-                PostList[].class));
+        List<PostList> PostListEntries = List.of(mapper.readValue(Paths.get("src/main/resources/posts.json")
+                        .toFile(), PostList[].class));
 
         //While loop så att programmet körs till användaren väljer att avsluta det
         while (choice != 3) {
