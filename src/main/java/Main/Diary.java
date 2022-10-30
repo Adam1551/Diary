@@ -65,9 +65,9 @@ public class Diary {
             else if (choice == 2) {
                 System.out.println("These are your archived posts");
                 System.out.println("_______________");
-                PostList[] postLists = mapper.readValue(Paths.get("src/main/resources/posts.json").toFile(), PostList[].class);
-                List<PostList> JSONEntries = List.of(mapper.readValue(Paths.get("src/main/resources/posts.json")
-                        .toFile(), PostList[].class));
+                PostList[] postLists = mapper.readValue(Paths.get("src/main/resources/posts.json").toFile(),
+                        PostList[].class); List<PostList> JSONEntries = List.of(mapper.readValue(Paths.get
+                                ("src/main/resources/posts.json").toFile(), PostList[].class));
 
                 //itererar genom listan med sparade inlägg och skriver ut
                 for (PostList userEnter : JSONEntries) {
